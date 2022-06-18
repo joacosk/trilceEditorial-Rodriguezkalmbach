@@ -1,0 +1,25 @@
+.navbar{
+    position:sticky; 
+    top:0;
+    z-index: 1;
+    width: 100%;
+}
+.container-fluid{
+    width: auto;
+    align-items:center;
+    justify-items:space-around;
+}
+#logoNav{
+    height: 3em;
+    width: auto;
+}
+
+#hamburguesa{
+    align-items:center;
+    justify-content:space-around;
+}
+
+#navbarNav{
+    align-items:center;
+    justify-content:space-around;
+}
