@@ -1,6 +1,6 @@
 import'./NavbarApp.css'
 import Logo from '../assets/logo_nav2.png'
-
+import CartIcon from './CartWidget.js'
 
 function NavbarApp() {
   return (
@@ -32,7 +32,11 @@ function NavbarApp() {
                 </li>
               </ul>
             </div>
+            <div>
+            <CartIcon  />
+            </div>
           </div>
+          
         </nav>
       </header>
   );
