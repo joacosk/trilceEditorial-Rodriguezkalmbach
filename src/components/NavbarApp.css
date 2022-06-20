@@ -23,3 +23,10 @@
     align-items:center;
     justify-content:space-around;
 }
+.logoCarrito{
+    display: flex;
+    align-self: center;
+    justify-self:flex-end;
+    
+    
+}

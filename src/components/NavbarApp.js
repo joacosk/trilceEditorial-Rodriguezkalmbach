@@ -32,7 +32,7 @@ function NavbarApp() {
                 </li>
               </ul>
             </div>
-            <div>
+            <div className='logoCarrito'>
             <CartIcon  />
             </div>
           </div>
