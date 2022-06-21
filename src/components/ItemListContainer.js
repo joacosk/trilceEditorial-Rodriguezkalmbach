@@ -1,17 +1,17 @@
-import Card from './Card.js'
-import './ItemListContainer.css'
+import Card from "./Card.js";
+import "./ItemListContainer.css";
 
-function ItemListContainer() {
-    return (
-      <div className="ItemListContainer">
-        <h3>En esta página ingresaremos varios artículos del catálogo</h3>
-        <div className="tarjetasCatalogo">
-            <ul>
-                <Card />
-            </ul>
-        </div>
+function ItemListContainer({ titulo }) {
+  return (
+    <div className="ItemListContainer">
+      <h3>{titulo}</h3>
+      <div className="tarjetasCatalogo">
+        <ul>
+          <Card />
+        </ul>
       </div>
-    );
-  }
-  
-  export default ItemListContainer;
+    </div>
+  );
+}
+
+export default ItemListContainer;
