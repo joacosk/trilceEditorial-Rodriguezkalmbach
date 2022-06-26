@@ -1,6 +1,6 @@
 import "./NavbarApp.css";
-import Logo from "../assets/logo_nav2.png";
-import CartIcon from "./CartWidget.js";
+import Logo from "../../assets/logo_nav2.png";
+import CartIcon from "../CartWidget/CartWidget.js";
 
 function NavbarApp() {
   return (

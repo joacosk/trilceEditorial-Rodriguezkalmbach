@@ -2,7 +2,7 @@ import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleRight, faAngleLeft } from "@fortawesome/free-solid-svg-icons";
 
-import "./itemCount.css";
+import "./ItemCount.css";
 
 function ItemCount({ stock, initial, onAdd }) {
   // Seteamos valor de conteo y generamos setConteo --> Arranca en valor inicial (hay que transformalo a numero entero)
@@ -13,8 +13,7 @@ function ItemCount({ stock, initial, onAdd }) {
   const sumar = () => {
     if (num < stock) {
       setConteo(num + 1);
-      setAdd(onAdd);
-    } else {
+    }else {
       setAdd("No hay más stock");
     }
   };
@@ -25,16 +24,26 @@ function ItemCount({ stock, initial, onAdd }) {
     }
   };
 
+  // Creamos funcion agregar carrito
+  const addon = () => {
+    if (num < stock) {
+      setAdd(onAdd);
+    } else {
+      setAdd("No hay más stock");
+    }
+  };
+
   return (
     <div className="contador">
       <button className="tracker" onClick={restar}>
         <FontAwesomeIcon icon={faAngleLeft} color="red" />
-        <FontAwesomeIcon icon="fa-solid fa-heart" beat />
       </button>
       <h1>{num}</h1>
       <button className="tracker" onClick={sumar}>
         <FontAwesomeIcon icon={faAngleRight} color="green" />
-        <FontAwesomeIcon icon="fa-solid fa-heart" beat />
+      </button>
+      <button className="btnOnAdd" onClick={addon}>
+        Agregar al carrito
       </button>
       <p>{add}</p>
     </div>

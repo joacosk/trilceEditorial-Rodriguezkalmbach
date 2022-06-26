@@ -1,7 +1,7 @@
 //import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import NavbarApp from './components/NavbarApp';
-import Body from './components/Body';
+import Body from './components/Body/Body';
+import NavbarApp from './components/NavBarApp/NavbarApp';
 
 
 //import Logo from './assets/logo_nav2.png'

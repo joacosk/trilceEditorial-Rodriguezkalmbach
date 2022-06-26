@@ -8,7 +8,6 @@ function CartIcon() {
     return (
       <div className="App">
         <FontAwesomeIcon icon={faCartShopping}  width={"40px"} height={"6px"}/>
-        <FontAwesomeIcon icon="fa-solid fa-heart" beat />
       </div>
     );
   }
