@@ -1,6 +1,7 @@
 //import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Body from './components/Body/Body';
+import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
 import NavbarApp from './components/NavBarApp/NavbarApp';
 
 
@@ -11,6 +12,7 @@ function App() {
   return (
     <div className="App">
       <NavbarApp />
+      <ItemDetailContainer />
       <Body />
     </div>
   );

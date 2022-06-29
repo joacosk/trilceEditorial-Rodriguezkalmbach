@@ -12,7 +12,6 @@ export const Item= ({title,image,price,description}) =>{
                 <p>{price}</p>
                 <ItemCount stock="5" initial="1" onAdd="Sumado al carrito" />
             <button className="btn btn_ver_mas">Ver más</button>
-            <button className="btn btn_ver_mas">Agregar al carrito</button>
             </div>
         </div>
 
