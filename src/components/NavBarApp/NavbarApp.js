@@ -1,6 +1,8 @@
 import "./NavbarApp.css";
 import Logo from "../../assets/logo_nav2.png";
 import CartIcon from "../CartWidget/CartWidget.js";
+import {Link, NavLink} from 'react-router-dom'
+
 
 function NavbarApp() {
   return (
@@ -22,14 +24,14 @@ function NavbarApp() {
           <div className="collapse navbar-collapse" id="navbarNav">
             <ul className="navbar-nav">
               <li className="nav-item">
-                <a className="nav-link active" aria-current="page" href="/">
+                <NavLink activeClassName="active" className="nav-link" to="/inicio">
                   Inicio
-                </a>
+                </NavLink>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="/">
-                  Quienes Somos
-                </a>
+                <NavLink activeClassName="active" className="nav-link" to="/categorias">
+                  Categorías
+                </NavLink>
               </li>
 
               <a className="navbar-brand" href="/">

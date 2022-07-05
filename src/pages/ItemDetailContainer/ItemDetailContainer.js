@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { listadoProductos } from "../../Data/publicaciones.js";
-import ItemDetail from "../ItemDetail/ItemDetail.js";
+import ItemDetail from "../../components/ItemDetail/ItemDetail.js";
 import "./ItemDetailContainer.css"
 
 

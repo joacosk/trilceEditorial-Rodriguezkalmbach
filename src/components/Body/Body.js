@@ -1,5 +1,5 @@
 import "./Body.css";
-import ItemListContainer from "../ItemListContainer/ItemListContainer";
+import ItemListContainer from "../../pages/ItemListContainer/ItemListContainer";
 
 function Body() {
   return (
