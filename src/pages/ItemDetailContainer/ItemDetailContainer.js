@@ -1,35 +1,43 @@
 import { useEffect, useState } from "react";
 import { listadoProductos } from "../../Data/publicaciones.js";
 import ItemDetail from "../../components/ItemDetail/ItemDetail.js";
-import "./ItemDetailContainer.css"
-
+import "./ItemDetailContainer.css";
+import { useParams } from "react-router-dom";
 
 function ItemDetailContainer() {
+  const [isLoading, setIsLoading] = useState(true);
+  
+  const [item, setItem] = useState({});
 
-    
-    const [item, setItem] = useState({});
+  const { publicacionId } = useParams();
+  console.log(item);
 
-    const getItem = ()=>{
-        return new Promise((resolve,reject)=>
-        setTimeout(()=>{
-            listadoProductos.length > 0
-            ? resolve(listadoProductos)
-            : reject("No hay datos");
-        },2000)
-        )
-    }
+  const getItem = () => {
+    setIsLoading(true);
 
-    // Traemos Solamente el item de la lista en posición 0
-    useEffect(()=>{
-        getItem()
-        .then((res)=> res[0])
-        .then((data)=>setItem(data))
-        .catch((err)=> console.log(err))
-    },[])
+    return new Promise((resolve, reject) =>
+      setTimeout(() => {
+        listadoProductos.length > 0
+          ? resolve(listadoProductos)
+          : reject("No hay datos");
+      }, 500)
+    );
+  };
 
-  return (
+  // Traemos Solamente el item de la lista en posición publicacionId
+  useEffect(() => {
+    getItem()
+      .then((res) => res[publicacionId])
+      .then((data) => setItem(data))
+      .catch((err) => console.log(err))
+      .finally(() => setIsLoading(false)); // --> Pasa a false loading
+  }, []);
+
+  return isLoading ? (
+    <h1>Cargando página...</h1>
+  ) :(
     <div className="item-detail-container">
-    <ItemDetail itemProp={item}/>
+      <ItemDetail itemProp={item} />
     </div>
   );
 }

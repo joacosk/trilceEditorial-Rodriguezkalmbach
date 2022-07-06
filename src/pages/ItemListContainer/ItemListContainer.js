@@ -2,41 +2,43 @@ import { useEffect, useState } from "react";
 import "./ItemListContainer.css";
 import { listadoProductos } from "../../Data/publicaciones.js";
 import { ItemList } from "../../components/ItemList/ItemList.js";
+import { useParams } from "react-router-dom";
 
 function ItemListContainer({ titulo }) {
   const [productos, setProductos] = useState([]);
 
+  const [isLoading, setIsLoading] = useState(true);
+
+  const { categoriaId } = useParams();
+  console.log(categoriaId);
+
   const getProductos = () => {
+    setIsLoading(true);
     return new Promise((resolve, reject) => {
       setTimeout(() => {
-        listadoProductos.length > 0
-          ? resolve(listadoProductos)
-          : reject("No hay datos");
-      }, 2000);
+        const myData = categoriaId
+          ? listadoProductos.filter((item) => item.categoria === categoriaId)
+          : listadoProductos;
+        resolve(myData);
+      }, 200);
     });
   };
-
   useEffect(() => {
     getProductos()
-      .then((res)=> setProductos(res))
-      .catch((err) => console.log(err));
-  },[]);
-  
-  // Utilizando fetch
-  /*useEffect(()=>{
-    fetch("./publicaciones.json")
-    .then(res => res.json())
-    .then(data => setProductos(data))
-    .catch(err => console.log(err))
-  },[])
-*/
+      .then((res) => {
+        setProductos(res);
+      })
+      .finally(() => setIsLoading(false)); // --> Pasa a false loading
+  }, [categoriaId]); // Hay que indicar que cambie cuando cambie categoriaId
 
-  return (
+  return isLoading ? (
+    <h1>Cargando página...</h1>
+  ) : (
     <div className="ItemListContainer">
       <h3>{titulo}</h3>
       <div className="tarjetasCatalogo">
         <ul>
-        <ItemList listadoProductos ={productos} />
+          <ItemList listadoProductos={productos} />
         </ul>
       </div>
     </div>
