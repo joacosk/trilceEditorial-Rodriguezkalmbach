@@ -1,17 +1,21 @@
-import { useState } from "react";
+import { useState , useContext} from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleRight, faAngleLeft } from "@fortawesome/free-solid-svg-icons";
 
 import "./ItemCount.css";
+import { CartContext } from "../../context/CartContext";
+import Item from "../Item/Item";
 
-function ItemCount({ stock, initial, onAdd }) {
+function ItemCount(props) {
+  //console.log(props)
   // Seteamos valor de conteo y generamos setConteo --> Arranca en valor inicial (hay que transformalo a numero entero)
-  const [num, setConteo] = useState(Number(initial));
+  const [num, setConteo] = useState(Number(props.initial));
   const [add, setAdd] = useState("");
 
+  const {addToCart} = useContext(CartContext)
   // Creamos funcion sumar --> ejecuta conteo y onAdd
   const sumar = () => {
-    if (num < stock) {
+    if (num < props.stock) {
       setConteo(num + 1);
     }else {
       setAdd("No hay más stock");
@@ -26,12 +30,19 @@ function ItemCount({ stock, initial, onAdd }) {
 
   // Creamos funcion agregar carrito
   const addon = () => {
-    if (num < stock) {
-      setAdd(onAdd);
+    if (num < props.stock) {
+      setAdd(num);
+      setConteo(0)
+      addToCart(props.itemProp,num)
+      
+      props.onSaveData(num) // Ejecutamos función creada en el padre para extraer el número
     } else {
       setAdd("No hay más stock");
     }
   };
+
+
+
 
   return (
     <div className="contador">

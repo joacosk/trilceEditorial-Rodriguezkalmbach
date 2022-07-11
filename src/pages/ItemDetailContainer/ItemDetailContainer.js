@@ -10,7 +10,7 @@ function ItemDetailContainer() {
   const [item, setItem] = useState({});
 
   const { publicacionId } = useParams();
-  console.log(item);
+  
 
   const getItem = () => {
     setIsLoading(true);
