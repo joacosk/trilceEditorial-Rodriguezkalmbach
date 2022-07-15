@@ -44,7 +44,7 @@ export const listadoProductos=[
       "title": "Ex eran los de antes",
       "price": 100,
       "pictureUrl": "/publicaciones/lugaresMasExtraños.jpg",
-      "descripcion": "poesía de Celia Pérez Campos y fotografía de Antonella Farina",
+      "descripcion": "poesía de C. Pérez Campos y fotografía de Antonella Farina",
       "categoria" : "Cuento"
     },
     {

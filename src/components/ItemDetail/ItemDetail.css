@@ -2,13 +2,13 @@
     display:flex;
     flex-direction: column;
     justify-self: center;
-    background-color: green;
+    /*background-color: green;*/
     width: 25em;
     margin-left: 40em;
 }
 .item-detail-body{
     display:flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items:center;
     justify-content:space-around;
     padding: 1em;
@@ -47,10 +47,20 @@
     text-align: center;
 
 }
-
-.item-detail-body-right-btns{
+.item-detail-body-counter{
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(4, 0, 255, 0.1);
+    margin-top: 1em;
+    padding: 0.7em;
+    border-radius:  0.3em;
+    text-align: center;
+}
+.item-detail-body-btns{
     display: flex;
     justify-items: center;
     align-items: center;
+    padding-top: 1em;
     padding-left: 35%;
 }
+

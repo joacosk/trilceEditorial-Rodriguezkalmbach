@@ -7,12 +7,12 @@ import { CartContext } from "../../context/CartContext";
 import Item from "../Item/Item";
 
 function ItemCount(props) {
-  //console.log(props)
   // Seteamos valor de conteo y generamos setConteo --> Arranca en valor inicial (hay que transformalo a numero entero)
   const [num, setConteo] = useState(Number(props.initial));
   const [add, setAdd] = useState("");
 
   const {addToCart} = useContext(CartContext)
+
   // Creamos funcion sumar --> ejecuta conteo y onAdd
   const sumar = () => {
     if (num < props.stock) {
@@ -53,7 +53,7 @@ function ItemCount(props) {
       <button className="tracker" onClick={sumar}>
         <FontAwesomeIcon icon={faAngleRight} color="green" />
       </button>
-      <button className="btnOnAdd" onClick={addon}>
+      <button className="btn btnOnAdd btn-outline-secondary" onClick={addon}>
         Agregar al carrito
       </button>
       <p>{add}</p>

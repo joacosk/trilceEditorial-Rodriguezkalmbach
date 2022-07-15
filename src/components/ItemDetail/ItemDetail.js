@@ -1,17 +1,14 @@
 import "./ItemDetail.css"
-import { useContext, useEffect, useState } from 'react'
-import {useParams} from 'react-router-dom'
-import { listadoProductos } from "../../Data/publicaciones.js";
+import { useState } from 'react'
 import { Link } from "react-router-dom"
 
 import ItemCount from "../ItemCount/ItemCount"
-import { CartContext } from "../../context/CartContext";
 
 // HACER FUNCION QUE NOS PERMITA TRAER INFORMACIÓN DEL Item Count
 
 function ItemDetail({itemProp}) {
 
-    const [count,setCount] = useState("")
+    const [count,setCount] = useState(null)
     // Recibir por parametro la info de ItemCount
     const saveDataHandler = (add) =>{
         const countData = add // Genera una nueva variable, trayendo TODO lo que viene de count
@@ -20,12 +17,11 @@ function ItemDetail({itemProp}) {
         setCount(countData)
     }
 
-    // ############################# CARTCONTEXT #############################
-    const {addToCart} = useContext(CartContext);
+
   return (
-    <div className="item-detail">
-        <div className="item-detail-title"><h3>{itemProp.title}</h3></div>
-        <div className="item-detail-body">
+    <div className="item-detail card">
+        <div className="item-detail-title "><h3>{itemProp.title}</h3></div>
+        <div className="item-detail-body  cardStyle">
             <div className="item-detail-body-image">
                 <img src={itemProp.pictureUrl} alt={itemProp.title} className="item-detail-body-image-left"/>
             </div>
@@ -37,12 +33,15 @@ function ItemDetail({itemProp}) {
             <div className="item-detail-body-right-price">
                 {itemProp.price}
             </div>
-            <div>
-            {count === "" ? <ItemCount itemProp={itemProp} stock="6" initial="1" onSaveData={saveDataHandler}/> : "Elejiste "+ count + " productos"}
+            <div className="item-detail-body-counter">
+            {!count  ? 
+            <ItemCount itemProp={itemProp} stock="6" initial="1" onSaveData={saveDataHandler}/> 
+            : 
+            "Elejiste "+ count + " productos"}
             </div>
-            <div className="item-detail-body-right-btns">
+            <div className="item-detail-body-btns">
             <Link to={`/Cart`}>
-             <button >compra</button>
+             <button type ="button" className="btn btn-outline-primary">Comprar</button>
              </Link>
             
             </div>
