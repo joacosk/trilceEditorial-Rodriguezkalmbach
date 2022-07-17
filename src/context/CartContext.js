@@ -36,7 +36,7 @@ export const CartProvider = ({ defaultValue = [], children }) => {
 
   // Funcion que se ejecuta al agregar item al carrito
   const addToCart = (item, quantity) => {
-    console.log(item)
+    
     if (isInCart(item.id)) {
       // Verificar si producto existe en carrito
       const newCart = [...cart]; // Copiamos carrito con spread operator
@@ -53,13 +53,26 @@ export const CartProvider = ({ defaultValue = [], children }) => {
     }
   };
 
+    // Funcion para eliminar un producto según id
+  const deleteToCartByIndex=(id)=>{
+    const newCart = [...cart];
+    console.log(newCart);
+    let newCartf = newCart.filter((element)=> element.item.id !==id)
+    setCart([...newCartf]);
+  }
+
+
   /*Declaramos objeto context, que toma todas las funciones del contexto */
   const context = {
     cart,
     clearCart,
     addToCart,
     isInCart,
+    deleteToCartByIndex,
   };
 
-  return <Provider value={context}>{children}</Provider>;
+  return(
+     <Provider value={context}>
+    {children}
+    </Provider>);
 };

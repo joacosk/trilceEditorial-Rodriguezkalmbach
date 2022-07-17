@@ -10,7 +10,7 @@ function ItemListContainer({ titulo }) {
   const [isLoading, setIsLoading] = useState(true);
 
   const { categoriaId } = useParams();
-  console.log(categoriaId);
+  
 
   const getProductos = () => {
     setIsLoading(true);

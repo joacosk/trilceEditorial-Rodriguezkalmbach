@@ -10,8 +10,7 @@ function ItemDetailContainer() {
   const [item, setItem] = useState({});
 
   const { publicacionId } = useParams();
-  
-
+  console.log(publicacionId)
   const getItem = () => {
     setIsLoading(true);
 
@@ -29,7 +28,7 @@ function ItemDetailContainer() {
     getItem()
       .then((res) => res[publicacionId])
       .then((data) => setItem(data))
-      .catch((err) => console.log(err))
+      
       .finally(() => setIsLoading(false)); // --> Pasa a false loading
   }, []);
 

@@ -40,7 +40,7 @@ function ItemDetail({itemProp}) {
             "Elejiste "+ count + " productos"}
             </div>
             <div className="item-detail-body-btns">
-            <Link to={`/Cart`}>
+            <Link to={`/cart`}>
              <button type ="button" className="btn btn-outline-primary">Comprar</button>
              </Link>
             

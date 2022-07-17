@@ -1,6 +1,6 @@
 export const listadoProductos=[
     {
-      "id": 1,
+      "id": 0,
       "title": "Natural",
       "price": 100,
       "pictureUrl": "/publicaciones/natural.jpg",
@@ -8,55 +8,55 @@ export const listadoProductos=[
       "categoria" : "Novela"
     },
     {
-      "id": 2,
+      "id": 1,
       "title": "Infancia Errática",
-      "price": 100,
+      "price": 115,
       "pictureUrl": "/publicaciones/infanciaErratica.jpg",
       "descripcion": "poesía y fotografía de German Lorenzo Robert",
       "categoria" : "Novela"
     },
     {
-      "id": 3,
+      "id": 2,
       "title": "Imaginar Inmenso",
-      "price": 100,
+      "price": 165,
       "pictureUrl": "/publicaciones/imaginarInmenso.jpg",
       "descripcion": "poesía y macrofotografía de Joaco Antje",
       "categoria" : "Poesia"
     },
     {
-      "id": 4,
+      "id": 3,
       "title": "Quiero Decir",
-      "price": 100,
+      "price": 170,
       "pictureUrl": "/publicaciones/quieroDecir.jpg",
       "descripcion": "poesía y fotografía de Anailuig Enoznip",
       "categoria" : "Cuento"
     },
     {
-      "id": 5,
+      "id": 4,
       "title": "Los Millones del Momento",
-      "price": 100,
+      "price": 150,
       "pictureUrl": "/publicaciones/exEranLosDeAntes.jpg",
       "descripcion": "poesía y fotografía de Antonella Farina",
       "categoria" : "Cuento"
     },
     {
-      "id": 6,
+      "id": 5,
       "title": "Ex eran los de antes",
-      "price": 100,
+      "price": 200,
       "pictureUrl": "/publicaciones/lugaresMasExtraños.jpg",
       "descripcion": "poesía de C. Pérez Campos y fotografía de Antonella Farina",
       "categoria" : "Cuento"
     },
     {
-      "id": 7,
+      "id": 6,
       "title": "Esos lugares donde todo es más extraño",
-      "price": 100,
+      "price": 130,
       "pictureUrl": "/publicaciones/losMillonesDelMomento.jpg",
       "descripcion": "poesía de Belén Maldonado y fotografía por Aimara Schwieters",
       "categoria" : "Poesia"
     },
     {
-      "id": 8,
+      "id": 7,
       "title": "Luxx",
       "price": 100,
       "pictureUrl": "/publicaciones/luxx.jpg",

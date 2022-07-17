@@ -1,5 +1,19 @@
-.tarjetasCatalogo{
+.cartWidget{
     display: flex;
-    justify-items: center;
-    align-items: center;
+    flex-direction: row;
+}
+
+.cartWidget__counter{
+    background-color: rgba(165, 42, 42, 0.466);
+    border-radius: 50%;
+    width: 1.5em;
+    height: 1.5em;
+}
+
+.cartWidget__counter div{
+    position: relative;
+    margin: auto;
+    padding: auto;
+    width: 50%;
+    height: 50%;
 }
