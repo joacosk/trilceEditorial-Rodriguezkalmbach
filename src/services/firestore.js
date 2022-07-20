@@ -26,15 +26,30 @@ export async function getData(){
     const docSnapshot = await getDocs(itemPubliRef)
     //Reescribimos array que tenga "docs" dentro de snapshot
     const dataPublis = docSnapshot.docs.map((item)=>{
+
         // Creamos objeto personalizado con toda la info de data más el id de cada documento
         const publi = {
             ...item.data(),
             id: item.id
         }
         return publi;
+        
     })
     return(dataPublis);
 };
+
+
+/*
+export async function getDataByCategory(categoria){
+
+    const itemPubliRef = collection(db,"items")
+    const q = query(itemPubliRef, where("categoria", "==", categoria))
+    const docSnapshot = await getDocs(q)
+    .then((items)=>{
+        prods=items.doc.map(item=>item.data());
+        setProductos(prods)
+    })
+}*/
 
 export async function getDataByCategory(categoria){
     const itemPubliRef = collection(db,"items"); // base y nombre de documento
@@ -42,18 +57,17 @@ export async function getDataByCategory(categoria){
     const q = query(itemPubliRef,where("categoria","==",categoria))
 
     const docSnapshot = await getDocs(q)
-
+ 
     const dataPublis = docSnapshot.docs.map((item)=>{
         // Creamos objeto personalizado con toda la info de data más el id de cada documento
         const publi = {
             ...item.data(),
             id: item.id
-        }
+        } 
+        
         return publi;
     })
     return(dataPublis);
-
-
 }
 
 
@@ -62,6 +76,8 @@ export async function getSingleData(id){
     const docRef = doc(itemPubliCollectionRef, id) // Pasamos colección y ID
 
     const docSnapshot = await getDoc(docRef); // Le pasamos el docRef al docSnapshot
+    
+
 
     return docSnapshot.data();
 }

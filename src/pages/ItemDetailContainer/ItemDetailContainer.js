@@ -9,7 +9,6 @@ function ItemDetailContainer() {
   const [isLoading, setIsLoading] = useState(true);
   
   const [item, setItem] = useState({});
-
   const { publicacionId } = useParams();
 
   // Traemos Solamente el item de la lista en posición publicacionId
@@ -26,7 +25,7 @@ function ItemDetailContainer() {
     <h1>Cargando página...</h1>
   ) :(
     <div className="item-detail-container">
-      <ItemDetail itemProp={item} />
+      <ItemDetail key={publicacionId}itemProp={item} />
     </div>
   );
 }

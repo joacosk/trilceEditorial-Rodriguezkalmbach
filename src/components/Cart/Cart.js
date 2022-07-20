@@ -10,13 +10,12 @@ function Cart() {
   const [productLength, setProductLength]= useState(0)
   
   const {cart} = useContext(CartContext)
-
   useEffect(() => {
     setProductLength(
       cart.reduce((previous,current)=>previous + current.quantity,0)
     )
   }, [cart]);
-  
+
   const total = cart.reduce(
     (previous,current)=> previous + current.quantity * current.item.price,0
   )

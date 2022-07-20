@@ -7,10 +7,9 @@ function CartItem(props) {
 
   const {deleteToCartByIndex}= useContext(CartContext)
   const deleteToCart = ()=>{
-    
+    console.log(props.publicacionId)
     deleteToCartByIndex(props.publicacionId)
 
-    
   }
     return ( 
     <section className="cartItem">
@@ -24,7 +23,7 @@ function CartItem(props) {
             <div className="cartItem__precioUnitario"><p>Precio</p><h4>{props.price * props.cantidad}</h4></div>
 
             <div className="cartItem_boxBtn" >
-              <button classNAme= "cartItem__btn" onClick={deleteToCart}>eliminar artículo</button>
+              <button className= "cartItem__btn" onClick={deleteToCart}>eliminar artículo</button>
             </div>
         </div>
     </section>
