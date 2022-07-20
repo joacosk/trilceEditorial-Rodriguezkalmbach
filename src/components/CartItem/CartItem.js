@@ -10,7 +10,7 @@ function CartItem(props) {
     
     deleteToCartByIndex(props.publicacionId)
 
-    console.log(`props es ${props.title}`)
+    
   }
     return ( 
     <section className="cartItem">

@@ -3,7 +3,7 @@ export const listadoProductos=[
       "id": 0,
       "title": "Natural",
       "price": 100,
-      "pictureUrl": "/publicaciones/natural.jpg",
+      "pictureUrl": "https://i.ibb.co/Sd17LcW/natural.jpg",
       "descripcion": "poesía de Santino Britez, ilustración de Juan Baez Nudelman",
       "categoria" : "Novela"
     },
@@ -11,7 +11,7 @@ export const listadoProductos=[
       "id": 1,
       "title": "Infancia Errática",
       "price": 115,
-      "pictureUrl": "/publicaciones/infanciaErratica.jpg",
+      "pictureUrl": "https://i.ibb.co/PhMkj7k/infancia-Erratica.jpg",
       "descripcion": "poesía y fotografía de German Lorenzo Robert",
       "categoria" : "Novela"
     },
@@ -19,7 +19,7 @@ export const listadoProductos=[
       "id": 2,
       "title": "Imaginar Inmenso",
       "price": 165,
-      "pictureUrl": "/publicaciones/imaginarInmenso.jpg",
+      "pictureUrl": "https://i.ibb.co/x6PkNvJ/imaginar-Inmenso.jpg",
       "descripcion": "poesía y macrofotografía de Joaco Antje",
       "categoria" : "Poesia"
     },
@@ -27,7 +27,7 @@ export const listadoProductos=[
       "id": 3,
       "title": "Quiero Decir",
       "price": 170,
-      "pictureUrl": "/publicaciones/quieroDecir.jpg",
+      "pictureUrl": "https://i.ibb.co/gwMBrWf/quiero-Decir.jpg",
       "descripcion": "poesía y fotografía de Anailuig Enoznip",
       "categoria" : "Cuento"
     },
@@ -35,7 +35,7 @@ export const listadoProductos=[
       "id": 4,
       "title": "Los Millones del Momento",
       "price": 150,
-      "pictureUrl": "/publicaciones/exEranLosDeAntes.jpg",
+      "pictureUrl": "https://i.ibb.co/C9vywt9/los-Millones-Del-Momento.jpg",
       "descripcion": "poesía y fotografía de Antonella Farina",
       "categoria" : "Cuento"
     },
@@ -43,7 +43,7 @@ export const listadoProductos=[
       "id": 5,
       "title": "Ex eran los de antes",
       "price": 200,
-      "pictureUrl": "/publicaciones/lugaresMasExtraños.jpg",
+      "pictureUrl": "https://i.ibb.co/dttt7px/ex-Eran-Los-De-Antes.jpg",
       "descripcion": "poesía de C. Pérez Campos y fotografía de Antonella Farina",
       "categoria" : "Cuento"
     },
@@ -51,7 +51,7 @@ export const listadoProductos=[
       "id": 6,
       "title": "Esos lugares donde todo es más extraño",
       "price": 130,
-      "pictureUrl": "/publicaciones/losMillonesDelMomento.jpg",
+      "pictureUrl": "https://i.ibb.co/BG2sPm0/lugares-Mas-Extra-os.jpg",
       "descripcion": "poesía de Belén Maldonado y fotografía por Aimara Schwieters",
       "categoria" : "Poesia"
     },
@@ -59,7 +59,7 @@ export const listadoProductos=[
       "id": 7,
       "title": "Luxx",
       "price": 100,
-      "pictureUrl": "/publicaciones/luxx.jpg",
+      "pictureUrl": "https://i.ibb.co/fCyYxZN/luxx.jpg",
       "descripcion": "Collage digital por Lu Baez y poesía de Juan Baez Nudelman",
       "categoria" : "Poesia"
     }

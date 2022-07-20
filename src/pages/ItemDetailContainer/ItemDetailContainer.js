@@ -3,6 +3,7 @@ import { listadoProductos } from "../../Data/publicaciones.js";
 import ItemDetail from "../../components/ItemDetail/ItemDetail.js";
 import "./ItemDetailContainer.css";
 import { useParams } from "react-router-dom";
+import { getSingleData } from "../../services/firestore.js";
 
 function ItemDetailContainer() {
   const [isLoading, setIsLoading] = useState(true);
@@ -10,27 +11,16 @@ function ItemDetailContainer() {
   const [item, setItem] = useState({});
 
   const { publicacionId } = useParams();
-  console.log(publicacionId)
-  const getItem = () => {
-    setIsLoading(true);
-
-    return new Promise((resolve, reject) =>
-      setTimeout(() => {
-        listadoProductos.length > 0
-          ? resolve(listadoProductos)
-          : reject("No hay datos");
-      }, 500)
-    );
-  };
 
   // Traemos Solamente el item de la lista en posición publicacionId
   useEffect(() => {
-    getItem()
-      .then((res) => res[publicacionId])
-      .then((data) => setItem(data))
-      
+    getSingleData(publicacionId) // Usamos la función creada en firestore
+      .then((data) => {setItem(data)})
+      .catch((errorMsg) => {
+        console.error(errorMsg);
+      })
       .finally(() => setIsLoading(false)); // --> Pasa a false loading
-  }, []);
+  }, [publicacionId]);
 
   return isLoading ? (
     <h1>Cargando página...</h1>

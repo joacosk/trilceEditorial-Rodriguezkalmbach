@@ -56,7 +56,7 @@ export const CartProvider = ({ defaultValue = [], children }) => {
     // Funcion para eliminar un producto según id
   const deleteToCartByIndex=(id)=>{
     const newCart = [...cart];
-    console.log(newCart);
+    
     let newCartf = newCart.filter((element)=> element.item.id !==id)
     setCart([...newCartf]);
   }
