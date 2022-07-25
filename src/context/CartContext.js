@@ -23,7 +23,10 @@ const { Provider } = CartContext;
 // Esto que sigue es un componente
 export const CartProvider = ({ defaultValue = [], children }) => {
   const [cart, setCart] = useState(defaultValue); // Acá creamos el estado del carrito
+  /*const [total, setTotal] =useState(0);*/
+  const [ordenCompleta, setOrdenCompleta] = useState(defaultValue);
 
+  
   /* Arrancamos con la declaración de funciones */
 
   const clearCart = () => {
@@ -61,6 +64,17 @@ export const CartProvider = ({ defaultValue = [], children }) => {
     setCart([...newCartf]);
   }
 
+  const getTotalPrice = ()=>{
+    let totalPrice = 0;
+    cart.forEach(element=>totalPrice += element.quantity * element.item.price)
+    return totalPrice
+  }
+
+  const getOrdenCompleta = (orden) =>{
+    const newOrden = [...orden];
+    setOrdenCompleta(newOrden)
+    console.log(ordenCompleta)
+  }
 
   /*Declaramos objeto context, que toma todas las funciones del contexto */
   const context = {
@@ -69,6 +83,9 @@ export const CartProvider = ({ defaultValue = [], children }) => {
     addToCart,
     isInCart,
     deleteToCartByIndex,
+    getTotalPrice,
+    ordenCompleta,
+    getOrdenCompleta
   };
 
   return(

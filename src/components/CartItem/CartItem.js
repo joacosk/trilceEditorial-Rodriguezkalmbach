@@ -23,7 +23,7 @@ function CartItem(props) {
             <div className="cartItem__precioUnitario"><p>Precio</p><h4>{props.price * props.cantidad}</h4></div>
 
             <div className="cartItem_boxBtn" >
-              <button className= "cartItem__btn" onClick={deleteToCart}>eliminar artículo</button>
+              <button className= "cartItem__btn btn btn-outline-dark" onClick={deleteToCart}>eliminar artículo</button>
             </div>
         </div>
     </section>

@@ -31,7 +31,7 @@ function ItemDetail({itemProp}) {
                 <p className="item-detail-text">{itemProp.descripcion}</p>
             </div>    
             <div className="item-detail-body-right-price">
-                {itemProp.price}
+                <h3>$ {itemProp.price}</h3>
             </div>
             <div className="item-detail-body-counter">
             {!count  ? 

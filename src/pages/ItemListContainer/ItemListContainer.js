@@ -29,7 +29,7 @@ function ItemListContainer({ titulo }) {
   }, [categoriaId]); // Hay que indicar que cambie cuando cambie categoriaId
 
   return isLoading ? (
-    <h1>Cargando página...</h1>
+    <h1 className="loading">Cargando página...</h1>
   ) : (
     <div className="ItemListContainer">
       <h3>{titulo}</h3>

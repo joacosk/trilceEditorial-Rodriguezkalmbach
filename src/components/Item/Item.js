@@ -10,7 +10,7 @@ export const Item= (props) =>{
             <div className="card-body">
                 <h5 className="card-body title">{props.title} </h5>
                 <p>{props.description}</p>
-                <p>{props.price}</p>
+                <h3>$ {props.price}</h3>
             <Link to={`/detalle/${props.publicacionId}`}>
              <button className="btn btn-outline-secondary btn_ver_mas" >Ver más</button>
              </Link>

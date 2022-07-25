@@ -22,7 +22,7 @@ function ItemDetailContainer() {
   }, [publicacionId]);
 
   return isLoading ? (
-    <h1>Cargando página...</h1>
+    <h1 className="loading">Cargando página...</h1>
   ) :(
     <div className="item-detail-container">
       <ItemDetail key={publicacionId}itemProp={item} />
