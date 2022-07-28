@@ -1,7 +1,7 @@
 import "./NavbarApp.css";
 import Logo from "../../assets/logo_nav2.png";
 import CartIcon from "../CartWidget/CartWidget.js";
-import {  NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 function NavbarApp() {
   return (
@@ -41,13 +41,9 @@ function NavbarApp() {
                 </NavLink>
               </li>
 
-                <NavLink
-                  activeClassName="active"
-                  className="navbar-brand"
-                  to="/"
-                >
-                  <img src={Logo} alt="Logo" id="logoNav" />
-                </NavLink>
+              <NavLink activeClassName="active" className="navbar-brand" to="/">
+                <img src={Logo} alt="Logo" id="logoNav" />
+              </NavLink>
 
               <li className="nav-item">
                 <NavLink
@@ -67,7 +63,6 @@ function NavbarApp() {
                   Contactanos
                 </NavLink>
               </li>
-
             </ul>
           </div>
           <div className="logoCarrito">
