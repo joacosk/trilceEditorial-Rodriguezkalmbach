@@ -1,0 +1,11 @@
+.contador{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-around ;
+}
+
+
+.tracker{
+    background-color: rgba(245, 245, 245, 0.137);
+    border-color: rgba(55, 55, 192, 0);
+}

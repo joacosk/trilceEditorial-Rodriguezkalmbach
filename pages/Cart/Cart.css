@@ -1,0 +1,25 @@
+
+.cart__totalPrice{
+    width: 80%;
+    margin: 1em auto;
+    background-color: white;
+    border-radius: 0.25rem;
+    box-shadow: 0 20px 40px -14px rgba(0,0,0,0.25);
+    display: flex;
+    flex-direction: row;
+    flex-wrap:nowrap;
+    justify-content: center;
+    align-content: center;
+}
+.carritoVacio{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.finalizar_compra{
+    display: flex;
+
+    justify-content: center;
+}

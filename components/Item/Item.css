@@ -1,0 +1,35 @@
+.col{
+    min-width: 25%;
+    }
+
+.card .cardStyle{
+    display: flex;
+    flex-direction: column;
+    
+}
+.card-body{
+    max-width: 18em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1em 0.3em;
+
+}
+
+.card-img-top{
+    max-height: 18em;
+    max-width: 18em;
+}
+.card-body .title{
+    text-align: center;
+}
+.item-detail-body-right-description{
+    padding: 0;
+    display: flex;
+    margin: 0;
+}
+
+.item-detail-text{
+    text-align: center;
+    text-justify:auto;
+}

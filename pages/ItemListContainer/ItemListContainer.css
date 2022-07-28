@@ -1,0 +1,21 @@
+.tarjetasCatalogo{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    
+}
+
+ul{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+h3{
+    text-align: center;
+}
+
+.loading{
+    text-align: center;
+}
